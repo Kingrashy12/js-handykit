@@ -15,7 +15,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "publish": "npm publish --access public"
+    "publish": "npm publish --access public --provenance=false"
   },
   "keywords": [
     "utilities",
