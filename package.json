@@ -1,6 +1,6 @@
 {
   "name": "js-handykit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A light-weight collection of handy Javascript utility functions for everyday development.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -17,6 +17,9 @@
     "dev": "tsup --watch",
     "publish": "npm publish --access public --provenance=false"
   },
+   "files": [
+    "dist/**/*"
+  ],
   "keywords": [
     "utilities",
     "helpers",
