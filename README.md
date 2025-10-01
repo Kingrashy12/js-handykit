@@ -145,4 +145,4 @@ console.log(formatCurrency(1000, "USD")); // '$1,000.00'
 
 ## License
 
-MIT
+[MIT](/LICENSE)
