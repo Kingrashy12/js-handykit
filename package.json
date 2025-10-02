@@ -1,6 +1,6 @@
 {
   "name": "js-handykit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A light-weight collection of handy Javascript utility functions for everyday development.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -17,7 +17,7 @@
     "dev": "tsup --watch",
     "publish": "npm publish --access public --provenance=false"
   },
-   "files": [
+  "files": [
     "dist/**/*"
   ],
   "keywords": [
@@ -25,6 +25,14 @@
     "helpers",
     "javascript"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kingrashy12/js-handykit"
+  },
+  "homepage": "https://github.com/Kingrashy12/js-handykit#readme",
+  "bugs": {
+    "url": "https://github.com/Kingrashy12/js-handykit/issues"
+  },
   "author": "",
   "license": "MIT",
   "devDependencies": {
