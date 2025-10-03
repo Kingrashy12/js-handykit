@@ -59,7 +59,7 @@ export function isEmpty(value: any): boolean {
  * const form2 = { name: "Jane", email: "jane@example.com" };
  * disableOnEmptyValues(form2, ["name", "email"]); // => false (all fields filled)
  */
-export const disableOnEmptyValues = <T>(
+export const hasEmptyValues = <T>(
   currentValues: T,
   fieldsToCheck: Array<keyof T>
 ) => {
@@ -84,7 +84,7 @@ export const disableOnEmptyValues = <T>(
  * const current2 = { name: "Jane", age: 30 };
  * disableOnEqualValues(current2, ["name", "age"], reference); // => false
  */
-export const disableOnEqualValues = <T>(
+export const hasEqualValues = <T>(
   currentValues: T,
   fieldsToCompare: Array<keyof T>,
   referenceValues: T
@@ -93,4 +93,29 @@ export const disableOnEqualValues = <T>(
     (field) => currentValues[field] === referenceValues[field]
   );
   return areValuesEqual;
+};
+
+export const validateFormFields = <T>(
+  form: T,
+  fields: Array<keyof T>,
+  nextFn: () => void,
+  alertFn?: (message: string) => void
+) => {
+  const missingFields = fields.filter(
+    (field) => !form[field] || form[field]?.toString().trim() === ""
+  );
+
+  if (missingFields.length > 0) {
+    if (alertFn) {
+      alertFn(`The following fields are required: ${missingFields.join(", ")}`);
+    } else {
+      throw new Error(
+        `The following fields are required: ${missingFields.join(", ")}`
+      );
+    }
+
+    return;
+  }
+
+  nextFn();
 };

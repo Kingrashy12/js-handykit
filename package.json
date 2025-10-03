@@ -1,6 +1,6 @@
 {
   "name": "js-handykit",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "A light-weight collection of handy Javascript utility functions for everyday development.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

@@ -90,8 +90,9 @@ console.log(isEmpty("")); // true
 - `throttle<T>(func: T, limit: number): (...args: Parameters<T>) => void` - Throttles a function call.
 - `deepClone<T>(obj: T): T` - Creates a deep clone of an object.
 - `isEmpty(value: any): boolean` - Checks if a value is empty.
-- `disableOnEmptyValues<T>(currentValues: T, fieldsToCheck: Array<keyof T>): boolean` - Checks if fields are empty.
-- `disableOnEqualValues<T>(currentValues: T, fieldsToCompare: Array<keyof T>, referenceValues: T): boolean` - Checks if fields are equal.
+- `hasEmptyValues<T>(currentValues: T, fieldsToCheck: Array<keyof T>): boolean` - Checks if fields are empty.
+- `hasEqualValues<T>(currentValues: T, fieldsToCompare: Array<keyof T>, referenceValues: T): boolean` - Checks if fields are equal.
+- `validateFormFields<T>(form: T, fields: Array<keyof T>, nextFn: () => void, alertFn?: (message: string) => void): void` - Validates form fields and either throws an error or calls the next function.
 
 ## Examples
 
